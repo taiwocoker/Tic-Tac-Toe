@@ -1,4 +1,4 @@
-#!usr/bin/env ruby
+#!/usr/bin/env ruby 
 
 valid_options = %w[1,2,3,4,5,6,7,8,9]
 choice_options = []
