@@ -5,6 +5,7 @@ game_won = false
 board = 1
 
 while board <= valid_options.size
+  board.render
   puts 'Player 1, it is your turn'
   puts 'player 1,select between number 1 and 9'
   # prompt user for a selection
