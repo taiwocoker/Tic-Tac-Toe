@@ -21,13 +21,11 @@ while board <= valid_options.size
   choice_options.push(choice_selected)
   puts 'The board is displayed'
 
-    if game_won
-      puts 'player 1 has won the game'
-    else
-      puts 'The game has ended in a draw'
-    end
-
-  
+  if game_won
+    puts 'player 1 has won the game'
+  else
+    puts 'The game has ended in a draw'
+  end
 
   board += 1
 
