@@ -5,7 +5,6 @@ game_won = false
 board = 1
 
 while board <= valid_options.size
-  #display the board
   puts 'board'
   puts 'Player 1, it is your turn'
   puts 'player 1,select between number 1 and 9'
@@ -22,8 +21,11 @@ while board <= valid_options.size
   choice_options.push(choice_selected)
   puts 'The board is displayed'
 
-  return puts 'player 1 has won the game' if game_won
-  return puts 'The game has ended in draw' if board == valid_options.size
+  if game_won
+    puts 'player 1 has won the game'
+  else
+    puts 'The game has ended in a draw'
+  end
 
   board += 1
 
@@ -42,8 +44,11 @@ while board <= valid_options.size
   choice_options.push(choice_selected)
   puts 'The board is displayed'
 
-  return puts 'player 2 has won the game' if game_won
-  return puts 'The game has ended in draw' if board == valid_options.size
+  if game_won
+    puts 'player 1 has won the game'
+  else
+    puts 'The game has ended in a draw'
+  end
 
   board += 1
 end
