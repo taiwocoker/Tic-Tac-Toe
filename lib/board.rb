@@ -2,11 +2,7 @@ class Board
   attr_reader :board
 
   def initialize
-    @board = %w[
-      _ _ _
-      _ _ _
-      _ _ _
-    ]
+    @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     @win_criteria = [
       [0, 1, 2],
@@ -22,13 +18,10 @@ class Board
 
   def display_board
     separator = '|'
-    lines = '-----------'
 
-    puts " #{@board[0]} #{separator} #{@board[1]} #{separator} #{@board[2]} "
-    puts lines.to_s
-    puts " #{@board[3]} #{separator} #{@board[4]} #{separator} #{@board[5]} "
-    puts lines.to_s
-    puts " #{@board[6]} #{separator} #{@board[7]} #{separator} #{@board[8]} "
+    "\n| #{@board[0]} #{separator} #{@board[1]} #{separator} #{@board[2]} |
+     \n| #{@board[3]} #{separator} #{@board[4]} #{separator} #{@board[5]} |
+     \n| #{@board[6]} #{separator} #{@board[7]} #{separator} #{@board[8]} | "
   end
 
   def update_board(position, value)
@@ -40,15 +33,13 @@ class Board
       one = x[0]
       two = x[1]
       three = x[2]
-      return true if @board[one] == @board[two] && @board[one] == @board[three] && @board[one] != '_'
+      return true if @board[one] == @board[two] && @board[one] == @board[three]
     end
     false
   end
 
   def full?
-    @board.each do |x|
-      return false if x == '_'
-    end
-    true
+    @board.all? { |index| index == 'x' }
+    @board.all? { |index| index == 'o' }
   end
 end
