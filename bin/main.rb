@@ -21,3 +21,12 @@ def player_move(player_name, validation, board)
   board.update_board(option_selected, player_name)
   board.display_board
 end
+ 
+until tictactoe.full?
+  player_move('X', validation, tictactoe)
+  return puts 'player X has won' if tictactoe.won?
+  return puts 'Draw' if tictactoe.full?
+
+  player_move('O', validation, tictactoe)
+  return puts 'player O has won' if tictactoe.won?
+end

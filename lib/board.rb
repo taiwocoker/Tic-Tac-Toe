@@ -1,5 +1,6 @@
 class Board
    attr_reader :board
+
    def initialize
     @board = %w[
       _ _ _
@@ -34,27 +35,21 @@ class Board
       @board[position.to_i - 1] = value
    end
 
-    def won?(board)
-      win_criteria.each {|win_combo|
-        index_0 = win_combo[0]
-        index_1 = win_combo[1]
-        index_2 = win_combo[2]
-    
-        position_1 = board[index_0]
-        position_2 = board[index_1]
-        position_3 = board[index_2]
-    
-        if position_1 == "X" && position_2 == "X" && position_3 == "X"
-          return win_combo
-        elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-          return win_combo
-        end
-      }
-      return false
+    def won?
+      @win_criteria.each do |x|
+      one = x[0]
+      two = x[1]
+      three = x[2]
+      return true if @board[one] == @board[two] && @board[one] == @board[three] && @board[one] != '_'
     end
+    false
+  end
     
-    def full?(board)
-      board.all? {|index| index == "X" || index == "O"}
+    def full?
+      @board.each do |x|
+         return false if x == '_'
+       end
+       true
     end
      
 end
