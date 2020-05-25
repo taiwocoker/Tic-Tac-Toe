@@ -7,8 +7,8 @@ tictactoe = Board.new
 validation = Validate.new
 
 def player_move(player_name, validation, board)
-  puts "player #{player_name} turn!"
-  puts "player #{player_name} select a number from 1 to 9"
+  puts "player #{player_name}, it's your turn!"
+  puts "player #{player_name}, select a number from 1 to 9"
   option_selected = gets.chomp
 
   until validation.valid_input(option_selected)
@@ -28,5 +28,5 @@ until tictactoe.full?
   return puts 'Draw' if tictactoe.full?
 
   player_move('O', validation, tictactoe)
-  return puts 'player O has won' if tictactoe.won?
+  return puts 'player O has won' if tictactoe.5won?
 end
