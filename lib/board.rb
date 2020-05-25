@@ -43,7 +43,7 @@ class Board
       return true if @board[one] == @board[two] && @board[one] == @board[three] && @board[one] != '_'
     end
     false
-  end
+    end
     
     def full?
       @board.each do |x|

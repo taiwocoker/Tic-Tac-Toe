@@ -5,8 +5,9 @@ require_relative '../lib/validate'
 
 tictactoe = Board.new
 validation = Validate.new
-
+ puts "Welcome to Tic Tac Toe!"
 def player_move(player_name, validation, board)
+  board.display_board
   puts "player #{player_name}, it's your turn!"
   puts "player #{player_name}, select a number from 1 to 9"
   option_selected = gets.chomp
@@ -19,7 +20,6 @@ def player_move(player_name, validation, board)
   validation.update_selected_position(option_selected)
 
   board.update_board(option_selected, player_name)
-  board.display_board
 end
  
 until tictactoe.full?
@@ -28,5 +28,5 @@ until tictactoe.full?
   return puts 'Draw' if tictactoe.full?
 
   player_move('O', validation, tictactoe)
-  return puts 'player O has won' if tictactoe.5won?
+  return puts 'player O has won' if tictactoe.won?
 end
