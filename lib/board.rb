@@ -34,8 +34,6 @@ class Board
       @board[position.to_i - 1] = value
    end
 
-
-
     def won?(board)
       win_criteria.each {|win_combo|
         index_0 = win_combo[0]
@@ -59,8 +57,4 @@ class Board
       board.all? {|index| index == "X" || index == "O"}
     end
      
-    
-
-
-   
 end
