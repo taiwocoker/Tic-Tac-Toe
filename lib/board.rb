@@ -1,7 +1,12 @@
 class Board
    attr_reader :board
    def initialize
-    @board = %w[" ", " ", " ", " ", " ", " ", " ", " ", " "] 
+    @board = %w[
+      _ _ _
+      _ _ _
+      _ _ _
+    ]
+ 
     @win_criteria = [
         [0, 1, 2],
         [3, 4, 5],
@@ -25,32 +30,12 @@ class Board
     puts " #{@board[6]} #{separator} #{@board[7]} #{separator} #{@board[8]} "
    end
 
-   def input_to_index(user_input)
-      new_user_input = user_input.to_i
-      new_user_input -= 1
-      return new_user_input
-   end
-    
-   def move(board, index, character = "X")
-      board[index] = character
-      return board
-   end
-   
-   def position_taken?(board, index)
-      if board[index] == " " || board[index] == "" || board[index] == nil
-        return false
-      else
-        return true
-      end
+   def update_board(position, value)
+      @board[position.to_i - 1] = value
    end
 
-   def position_taken?(board, index)
-      if board[index] == " " || board[index] == "" || board[index] == nil
-        return false
-      else
-        return true
-      end
-    end
+
+
     def won?(board)
       win_criteria.each {|win_combo|
         index_0 = win_combo[0]
