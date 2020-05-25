@@ -39,7 +39,9 @@ class Board
   end
 
   def full?
-    @board.all? { |index| index == 'x' }
-    @board.all? { |index| index == 'o' }
+    @board.each do |x|
+      return false if x.is_a? Numeric
+    end
+    true
   end
 end

@@ -26,7 +26,7 @@ end
 until tictactoe.full?
   player_move('X', validation, tictactoe)
   return puts 'player X has won' if tictactoe.won?
-  return puts 'Draw' if tictactoe.full?
+  return puts 'Game has been drawn' if tictactoe.full?
 
   player_move('O', validation, tictactoe)
   return puts 'player O has won' if tictactoe.won?
