@@ -58,11 +58,11 @@ Twitter: @hillarykiptoo_
 Linkedin: @hillaryodhiambo
 Email: hillaryodhiambo282@gmail.com
 
-👤 Kiptoo Hillary
+👤 Apelehin Okikiola
 
-Github: @okikiola11
-Twitter: 
-Linkedin: @okikiolaapeleyin
+Github: [@okikiola11](https://github.com/okikiola11)
+Twitter: [@Kikiolla3](https://twitter.com/Kikiolla3)
+Linkedin: [@okikiola-apelehin](https://www.linkedin.com/in/okikiola-apelehin-459008122/)
 Email: okikiola.apelehin@gmail.com
 
 
