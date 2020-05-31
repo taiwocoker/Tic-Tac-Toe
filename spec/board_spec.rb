@@ -1,7 +1,19 @@
-require './lib/board'
+require_relative '../lib/board'
 
 describe Board do
   let(:tictactoe) { Board.new }
+
+  describe 'display_board' do
+    it 'should display a board instance without any argument' do
+    tictactoe
+    end
+
+    it 'should create @board with integer keys between 1 and 9' do
+      board = tictactoe.board
+      expect(board[5]).to eql(6)
+      expect(board[10]).to eql(nil)
+    end
+  end
 
   describe 'update_board' do
     it 'should update position 1 with X' do
@@ -19,9 +31,9 @@ describe Board do
     end
 
     it 'should return true if a player match 3 columns' do
-      tictactoe.update_board(1, 'X')
-      tictactoe.update_board(4, 'X')
-      tictactoe.update_board(7, 'X')
+      tictactoe.update_board(0, 'X')
+      tictactoe.update_board(3, 'X')
+      tictactoe.update_board(6, 'X')
       expect(tictactoe.won?).to eq(true)
     end
 

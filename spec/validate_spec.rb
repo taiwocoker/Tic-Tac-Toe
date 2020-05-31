@@ -1,5 +1,5 @@
-require './lib/validate'
-require './lib/board'
+require_relative '../lib/validate'
+require_relative '../lib/board'
 
 describe Validate do
   let(:validation) { Validate.new }
