@@ -1,3 +1,5 @@
+require './lib/board'
+
 class Validate < Board
   attr_reader :selected_positions
   def initialize

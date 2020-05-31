@@ -1,10 +1,9 @@
-require 'rspec'
-require './lib/board'
 require './lib/validate'
-
+require './lib/board'
 
 describe Validate do
   let(:validation) { Validate.new }
+  let(:board) { Board.new }
 
   describe 'valid_input' do
     it 'should return true if a valid option is inputted' do
@@ -22,13 +21,6 @@ describe Validate do
     it 'should return false the position selected has been selected earlier' do
       validation.update_selected_position('3')
       expect(validation.valid_input('3')).to eq(false)
-    end
-  end
-
-  describe 'updated_selected_position' do
-    it 'should update the board when option is inputed' do
-      validation.update_selected_position('3')
-      expect(validation.selected_positions[0]).to eq('3')
     end
   end
 end
