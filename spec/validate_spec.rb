@@ -3,7 +3,7 @@ require './lib/board'
 
 describe Validate do
   let(:validation) { Validate.new }
-  let(:board) {Board.new}
+  let(:board) { Board.new }
 
   describe 'valid_input' do
     it 'should return true if a valid option is inputted' do
