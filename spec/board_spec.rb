@@ -5,7 +5,7 @@ describe Board do
 
   describe 'display_board' do
     it 'should display a board instance without any argument' do
-    tictactoe
+      tictactoe
     end
 
     it 'should create @board with integer keys between 1 and 9' do
