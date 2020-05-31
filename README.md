@@ -2,7 +2,7 @@
 
 In this project we had the opportunity to build Tic Tac Toe game in Ruby. Tic Tac Toe is a game that flexes the basic concepts in programming. For example, a Tic Tac Toe program requires data structures for storing the board and conditional logic for knowing whose turn it is or if someone has won.
 
-# Rules of the game
+# Game Rules
 
 Just in case you're unfamiliar with the game, let's discuss the rules first. Tic Tac Toe is played on a 3 x 3 grid of available cells, and the goal of the game is to place three of your tokens (X or O) on the grid in a row, including diagonals.
 
@@ -46,17 +46,23 @@ If you see an opportunity for improvement and can make the change yourself go ah
 
 👤 Taiwo Coker
 
-Github: @taiwocoker
-Twitter: @SelloCoker
-Linkedin: @taiwocoker
-Email: taiwofcoker@gmail.com
+- Github: @taiwocoker
+- Twitter: @SelloCoker
+- Linkedin: @taiwocoker
+- Email: taiwofcoker@gmail.com
 
 👤 Kiptoo Hillary
 
-Github: @githubhandle
-Twitter: @hillarykiptoo_
-Linkedin: @hillaryodhiambo
-Email: hillaryodhiambo282@gmail.com
+- Github: @githubhandle
+- Twitter: @hillarykiptoo_
+- Linkedin: @hillaryodhiambo
+- Email: hillaryodhiambo282@gmail.com
+
+👤 Apelehin Okikiola
+
+- Github: [@okikiola11](https://github.com/okikiola11)
+- Twitter: [@Kikiolla3](https://twitter.com/Kikiolla3)
+- Linkedin: [@okikiola-apelehin](https://www.linkedin.com/in/okikiola-apelehin-459008122/)
 
 🤝 Contributing Contributions, issues and feature requests are welcome!
 
