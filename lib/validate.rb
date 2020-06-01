@@ -1,3 +1,4 @@
+require_relative '../lib/board'
 class Validate < Board
   def initialize
     @valid_options = %w[1 2 3 4 5 6 7 8 9]
