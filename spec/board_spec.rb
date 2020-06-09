@@ -3,9 +3,12 @@ require_relative '../lib/board'
 describe Board do
   let(:tictactoe) { Board.new }
   describe '#display_board' do
-    it 'should create and display a board' do
+    it 'should create a board' do
       board = tictactoe.board
       expect(board[0]).to eql(1)
+    end
+    it 'should create a board' do
+      board = tictactoe.board
       expect(board[13]).to eql(nil)
     end
   end
