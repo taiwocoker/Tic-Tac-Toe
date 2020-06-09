@@ -28,7 +28,7 @@ describe Board do
       tictactoe.update_board(1, 'X')
       expect(tictactoe.full?).to eql(false)
     end
-    it 'returns true if the board is full' do 
+    it 'returns true if the board is full' do
       tictactoe.update_board(1, 'X')
       tictactoe.update_board(2, 'X')
       tictactoe.update_board(3, 'X')
@@ -39,6 +39,18 @@ describe Board do
       tictactoe.update_board(8, 'o')
       tictactoe.update_board(9, 'o')
       expect(tictactoe.full?).to eq(true)
+    end
+    it 'returns false when game is draw' do 
+      tictactoe.update_board(1, 'O')
+      tictactoe.update_board(2, 'O')
+      tictactoe.update_board(3, 'X')
+      tictactoe.update_board(4, 'X')
+      tictactoe.update_board(5, 'X')
+      tictactoe.update_board(6, 'O')
+      tictactoe.update_board(7, 'O')
+      tictactoe.update_board(8, 'O')
+      tictactoe.update_board(9, 'X')
+      expect(tictactoe.won?).to eq(false)
     end
   end
 end
