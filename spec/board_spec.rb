@@ -10,5 +10,9 @@ describe Board do
     end
   end
   describe '#update_board' do
+   it 'should be able to update value with chosen position' do 
+    tictactoe.update_board(4, 'x')
+    expect(tictactoe.board[3]).to eql('x')
+   end
   end
 end
