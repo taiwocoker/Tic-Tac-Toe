@@ -14,8 +14,8 @@ describe '#Validate' do
       expect(validation.valid_input('Y')).to eql(false)
     end
     it 'returns false if position has been selected' do
-        validation.update_selected_position('5')
-        expect(validation.valid_input('5')).to eq(false)
+      validation.update_selected_position('5')
+      expect(validation.valid_input('5')).to eq(false)
     end
   end
 end
