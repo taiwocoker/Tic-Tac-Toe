@@ -1,26 +1,21 @@
 require_relative '../lib/validate'
 require_relative '../lib/board'
-
-describe Validate do
+describe '#Validate' do
   let(:validation) { Validate.new }
   let(:board) { Board.new }
-
-  describe 'valid_input' do
-    it 'should return true if a valid option is inputted' do
-      expect(validation.valid_input('3')).to eq(true)
+  describe '#valid_input' do
+    it 'returns true if position is within valid options' do
+      expect(validation.valid_input('5')).to eql(true)
     end
-
-    it 'should return false if an alphabet is inputted' do
-      expect(validation.valid_input('A')).to eq(false)
+    it 'returns false if position is not within options' do
+      expect(validation.valid_input(11)).to eql(false)
     end
-
-    it 'should return false if the number is out of range' do
-      expect(validation.valid_input('57')).to eq(false)
+    it 'returns false if input other than intergers is selected' do
+      expect(validation.valid_input('Y')).to eql(false)
     end
-
-    it 'should return false the position selected has been selected earlier' do
-      validation.update_selected_position('3')
-      expect(validation.valid_input('3')).to eq(false)
+    it 'returns false if position has been selected' do
+      validation.update_selected_position('5')
+      expect(validation.valid_input('5')).to eq(false)
     end
   end
 end
