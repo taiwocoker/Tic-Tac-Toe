@@ -6,9 +6,6 @@ describe Board do
     it 'should create a board' do
       board = tictactoe.board
       expect(board[0]).to eql(1)
-    end
-    it 'should create a board' do
-      board = tictactoe.board
       expect(board[13]).to eql(nil)
     end
   end
