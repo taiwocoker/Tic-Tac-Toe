@@ -23,6 +23,10 @@ describe Board do
       expect(tictactoe.won?).to eql(true)
     end
   end
-  describe '#full?' do 
+  describe '#full?' do
+   it 'returns false if the board is not full' do 
+    tictactoe.update_board(1, 'X')
+    expect(tictactoe.full?).to eql(false)
+   end 
   end
 end
