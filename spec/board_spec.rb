@@ -15,4 +15,6 @@ describe Board do
     expect(tictactoe.board[3]).to eql('x')
    end
   end
+  describe '#won?' do 
+  end
 end
