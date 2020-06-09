@@ -5,9 +5,13 @@ describe '#Validate' do
   let(:board) { Board.new }
   describe '#valid_input' do
     it 'returns true if position is within valid options' do
-        expect(validation.valid_input('5')).to eql(true)
+      expect(validation.valid_input('5')).to eql(true)
     end
-    it 'returns false if position is not within options' do 
+    it 'returns false if position is not within options' do
+      expect(validation.valid_input(11)).to eql(false)
+    end
+    it 'returns false if input other than intergers is selected' do
+      expect(validation.valid_input('Y')).to eql(false)
     end
   end
 end
