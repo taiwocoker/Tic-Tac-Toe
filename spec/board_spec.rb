@@ -10,11 +10,19 @@ describe Board do
     end
   end
   describe '#update_board' do
-   it 'should be able to update value with chosen position' do 
-    tictactoe.update_board(4, 'x')
-    expect(tictactoe.board[3]).to eql('x')
-   end
+    it 'should be able to update value with chosen position' do
+      tictactoe.update_board(4, 'x')
+      expect(tictactoe.board[3]).to eql('x')
+    end
   end
-  describe '#won?' do 
+  describe '#won?' do
+    it 'should return true if either player matches the win criteria' do
+      tictactoe.update_board(4, 'o')
+      tictactoe.update_board(5, 'o')
+      tictactoe.update_board(6, 'o')
+      expect(tictactoe.won?).to eql(true)
+    end
+  end
+  describe '#full?' do 
   end
 end
