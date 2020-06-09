@@ -13,5 +13,9 @@ describe '#Validate' do
     it 'returns false if input other than intergers is selected' do
       expect(validation.valid_input('Y')).to eql(false)
     end
+    it 'returns false if position has been selected' do
+        validation.update_selected_position('5')
+        expect(validation.valid_input('5')).to eq(false)
+    end
   end
 end
