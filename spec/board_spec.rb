@@ -41,7 +41,7 @@ describe Board do
       expect(tictactoe.full?).to eq(true)
     end
 
-    it 'returns false when game is draw' do
+    it 'returns false when game is draw and no winner' do
       tictactoe.update_board(1, 'O')
       tictactoe.update_board(2, 'O')
       tictactoe.update_board(3, 'X')
